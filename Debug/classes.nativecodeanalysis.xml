@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\justin\source\repos\classes\classes\</FILEPATH>
+      <FILENAME>classes.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'this-&gt;finishes':  the writable size is '20' bytes, but 'finishesIndex' bytes might be written.</DESCRIPTION>
+    <FUNCTION>Horse::AddFinish</FUNCTION>
+    <DECORATED>?AddFinish@Horse@@QAEHH@Z</DECORATED>
+    <FUNCLINE>52</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\justin\source\repos\classes\classes\</FILEPATH>
+        <FILENAME>classes.cpp</FILENAME>
+        <LINE>54</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'finishesIndex&lt;=5')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\justin\source\repos\classes\classes\</FILEPATH>
+        <FILENAME>classes.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'this-&gt;finishes[5]', (writable range is 0 to 4)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>
